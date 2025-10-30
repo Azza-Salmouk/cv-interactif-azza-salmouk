@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Azza Salmouk — CV</title>
+
+  <!-- Polices & icônes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="cv-wrap" itemscope itemtype="http://schema.org/Person">
+
+    <!-- ========== HEADER ========== -->
+    <header class="cv-top header-compact" role="banner">
+      <!-- left: name + subtitle + contacts -->
+      <div class="header-left">
+        <div class="name-block">
+          <h1 class="big-name" itemprop="name">Azza <strong>Salmouk</strong></h1>
+          <p class="subtitle" itemprop="jobTitle"><em>Élève ingénieure en informatique</em></p>
+        </div>
+
+        <!-- contacts (order: email -> localisation -> téléphone -> linkedin) -->
+        <ul class="contact contact-compact" aria-label="Coordonnées">
+          <li>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:azzasalmouk20@gmail.com">azzasalmouk20@gmail.com</a>
+          </li>
+
+          <li>
+            <i class="fa fa-location-dot" aria-hidden="true"></i>
+            <span itemprop="address">Sousse, Tunisie</span>
+          </li>
+
+          <li>
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span itemprop="telephone">+216 54 303 136</span>
+          </li>
+
+          <li>
+            <i class="fa fa-link" aria-hidden="true"></i>
+            <a href="https://www.linkedin.com/in/azza-salmouk-7908482a5" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/azza-salmouk-7908482a5
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- right: larger circular photo -->
+      <div class="header-right" aria-hidden="false">
+        <div class="photo photo-large" role="img" aria-label="Photo d'Azza Salmouk">
+          <img src="img/photo.jpg" alt="Azza Salmouk">
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT (vertical sections) ========== -->
+    <main class="cv-main" role="main">
+
+      <!-- Profil -->
+      <section class="card about" id="profil">
+        <h2>Profil</h2>
+        <p>
+          Élève ingénieure en informatique, spécialité Génie Logiciel. Passionnée par le développement web, les systèmes embarqués et les nouvelles technologies.
+          Expérience en développement fullstack, supervision réseau et réalisation de projets techniques.
+        </p>
+      </section>
+
+      <!-- Compétences -->
+      <section class="card skills" id="competences">
+        <h2>Compétences</h2>
+        <div class="skill-grid">
+          <div class="skill-block">
+            <h3>Développement Web</h3>
+            <p>HTML, CSS, JavaScript, Bootstrap, Node.js, Vue.js, Tailwind CSS</p>
+          </div>
+          <div class="skill-block">
+            <h3>Développement mobile</h3>
+            <p>Flutter</p>
+          </div>
+          <div class="skill-block">
+            <h3>Programmation</h3>
+            <p>Python, Java, C</p>
+          </div>
+          <div class="skill-block">
+            <h3>Outils & Frameworks</h3>
+            <p>VS Code, IntelliJ, Android Studio, Figma, Cordova</p>
+          </div>
+          <div class="skill-block">
+            <h3>Base de données</h3>
+            <p>SQL, Oracle, MongoDB, PHP, Laravel</p>
+          </div>
+          <div class="skill-block">
+            <h3>Méthodologies</h3>
+            <p>UML, SCRUM, Méthodes agiles</p>
+          </div>
+          <div class="skill-block">
+            <h3>Soft skills</h3>
+            <p>Travail en équipe, autonomie, communication</p>
+          </div>
+          <div class="skill-block">
+            <h3>Langues</h3>
+            <p>Arabe (natif), Français (compétence professionnelle), Anglais (compétence professionnelle)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Expériences (timeline persistante) -->
+      <section class="card timeline-card" id="experiences">
+        <h2>Expériences</h2>
+
+        <ul class="timeline" aria-label="Timeline des expériences">
+          <li class="tl-item tl-left">
+            <div class="tl-content">
+              <span class="tl-date">07/2025 – 08/2025</span>
+              <h3>Stage d’été — Société Régionale de Transport de Médenine</h3>
+              <p>Refonte du site officiel et intégration d'une section horaires (GTFS) pour la recherche de lignes et horaires.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-right">
+            <div class="tl-content">
+              <span class="tl-date">02/2024 – 05/2024</span>
+              <h3>Stage PFE — Chaaben Technology Group</h3>
+              <p>Développement d'une application web et mobile connectée à des capteurs pour automatiser l'irrigation.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-left">
+            <div class="tl-content">
+              <span class="tl-date">08/2023</span>
+              <h3>Stage d’été — UNIMED Laboratoire Médical</h3>
+              <p>Suivi de la chaîne de production, compréhension du fonctionnement des machines et réalisation d'une armoire électrique.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-right">
+            <div class="tl-content">
+              <span class="tl-date">07/2022</span>
+              <h3>Saisonnier — Poste Tunisienne</h3>
+              <p>Traitement du courrier, saisie des données, réception client et tâches de comptabilité journalière.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Formations -->
+      <section class="card education" id="formations">
+        <h2>Formations</h2>
+        <ul>
+          <li>
+            <strong>Cycle d'ingénieur en informatique</strong> — 2024 – aujourd'hui
+            <p>Institut Supérieur des Sciences Appliquées de Sousse</p>
+          </li>
+          <li>
+            <strong>Licence en systèmes embarqués</strong> — 2021 – 2024
+            <p>Institut Supérieur des Sciences Appliquées de Sousse</p>
+          </li>
+          <li>
+            <strong>Baccalauréat — Mathématiques</strong> — 2020 – 2021
+            <p>Institut Supérieur des Sciences Appliquées de Sousse</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Projets (vertical list) -->
+      <section class="card projects" id="projets">
+        <h2>Projets</h2>
+
+        <div class="project-list">
+          <article class="project-card">
+            <div class="proj-body">
+              <h3 class="proj-title">Refonte du site officiel de la SRTM</h3>
+              <p class="proj-desc">Site moderne avec intégration GTFS pour la recherche des lignes et horaires.</p>
+              <p class="proj-meta">
+                <span class="tag">Vue.js</span>
+                <span class="tag">PHP</span>
+                <span class="tag">Laravel</span>
+                <span class="tag">Tailwind CSS</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="proj-body">
+              <h3 class="proj-title">VORTEXBID — Application mobile d'enchères</h3>
+              <p class="proj-desc">Application mobile d’enchères automobiles en temps réel — exploration, suivi et enchères en direct.</p>
+              <p class="proj-meta">
+                <span class="tag">Figma</span>
+                <span class="tag">Flutter</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="proj-body">
+              <h3 class="proj-title">Gestion location de voitures (web)</h3>
+              <p class="proj-desc">Application de gestion de locations (interface Java + MySQL) pour clients, véhicules et réservations.</p>
+              <p class="proj-meta">
+                <span class="tag">Java</span>
+                <span class="tag">MySQL</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="proj-body">
+              <h3 class="proj-title">Reconnaissance faciale (Raspberry Pi)</h3>
+              <p class="proj-desc">Détection et reconnaissance faciale embarquée avec Raspberry Pi et OpenCV.</p>
+              <p class="proj-meta">
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Python</span>
+                <span class="tag">Vision par ordinateur</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="cv-footer" role="contentinfo">
+      <div class="footer-actions">
+        <button class="btn" id="printBtn" title="Imprimer / enregistrer en PDF"><i class="fa fa-print" aria-hidden="true"></i> Imprimer / PDF</button>
+      </div>
+
+      <p class="updated-footer">Dernière mise à jour : <time datetime="2025-10-26">26 oct. 2025</time></p>
+      <p>© <span itemprop="name">Azza Salmouk</span> — CV professionnel</p>
+    </footer>
+  </div>
+
+  <!-- Mini JS: print -->
+  <script>
+    document.getElementById('printBtn').addEventListener('click', function () {
+      window.print();
+    });
+  </script>
+</body>
+</html>
