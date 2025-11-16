@@ -1,14 +1,3 @@
-/* script.js
-   CV interactif Option B
-   - theme persistant (localStorage)
-   - smooth anchors with header offset
-   - skill bar animation on scroll (IntersectionObserver)
-   - skill filtering
-   - show/hide extra details
-   - timeline interactive
-   - export PDF via html2pdf (fallback window.print)
-*/
-
 (function () {
   'use strict';
 
