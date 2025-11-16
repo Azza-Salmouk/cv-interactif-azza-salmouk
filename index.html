@@ -15,32 +15,27 @@
 <body>
   <div class="cv-wrap" itemscope itemtype="http://schema.org/Person">
 
-    <!-- ========== HEADER ========== -->
+    <!-- HEADER -->
     <header class="cv-top header-compact" role="banner">
-      <!-- left: name + subtitle + contacts -->
       <div class="header-left">
         <div class="name-block">
           <h1 class="big-name" itemprop="name">Azza <strong>Salmouk</strong></h1>
           <p class="subtitle" itemprop="jobTitle"><em>Élève ingénieure en informatique</em></p>
         </div>
 
-        <!-- contacts (order: email -> localisation -> téléphone -> linkedin) -->
         <ul class="contact contact-compact" aria-label="Coordonnées">
           <li>
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <a href="mailto:azzasalmouk20@gmail.com">azzasalmouk20@gmail.com</a>
           </li>
-
           <li>
             <i class="fa fa-location-dot" aria-hidden="true"></i>
             <span itemprop="address">Sousse, Tunisie</span>
           </li>
-
           <li>
             <i class="fa fa-phone" aria-hidden="true"></i>
             <span itemprop="telephone">+216 54 303 136</span>
           </li>
-
           <li>
             <i class="fa fa-link" aria-hidden="true"></i>
             <a href="https://www.linkedin.com/in/azza-salmouk-7908482a5" target="_blank" rel="noopener noreferrer">
@@ -50,17 +45,34 @@
         </ul>
       </div>
 
-      <!-- right: larger circular photo -->
       <div class="header-right" aria-hidden="false">
         <div class="photo photo-large" role="img" aria-label="Photo d'Azza Salmouk">
           <img src="img/photo.jpg" alt="Azza Salmouk">
         </div>
+
+        <div class="header-actions">
+          <button id="themeToggle" class="btn ghost" aria-pressed="false" title="Changer thème">
+            <i class="fa fa-moon"></i> Thème
+          </button>
+
+          <button id="exportPdfBtn" class="btn" title="Télécharger en PDF">
+            <i class="fa fa-file-pdf"></i> Télécharger PDF
+          </button>
+        </div>
       </div>
     </header>
 
-    <!-- ========== MAIN CONTENT (vertical sections) ========== -->
-    <main class="cv-main" role="main">
+    <!-- NAV -->
+    <nav class="cv-nav" aria-label="Navigation du CV">
+      <a href="#profil" class="nav-link">Profil</a>
+      <a href="#competences" class="nav-link">Compétences</a>
+      <a href="#experiences" class="nav-link">Expériences</a>
+      <a href="#formations" class="nav-link">Formations</a>
+      <a href="#projets" class="nav-link">Projets</a>
+    </nav>
 
+    <!-- MAIN -->
+    <main class="cv-main" role="main">
       <!-- Profil -->
       <section class="card about" id="profil">
         <h2>Profil</h2>
@@ -73,76 +85,108 @@
       <!-- Compétences -->
       <section class="card skills" id="competences">
         <h2>Compétences</h2>
+
+        <div class="skills-controls" role="toolbar" aria-label="Filtrer compétences">
+          <button class="skill-filter active" data-filter="all">Tous</button>
+          <button class="skill-filter" data-filter="web">Web</button>
+          <button class="skill-filter" data-filter="mobile">Mobile</button>
+          <button class="skill-filter" data-filter="langages">Langages</button>
+          <button class="skill-filter" data-filter="tools">Outils</button>
+        </div>
+
         <div class="skill-grid">
-          <div class="skill-block">
-            <h3>Développement Web</h3>
-            <p>HTML, CSS, JavaScript, Bootstrap, Node.js, Vue.js, Tailwind CSS</p>
+          <div class="skill-block" data-category="web">
+            <h3>Développement Web <button class="more-skill" aria-expanded="false">+ détails</button></h3>
+            <div class="skill-bar" data-value="90" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="skill-bar-fill" style="width:0%"></div>
+            </div>
+            <p class="skill-meta">HTML, CSS, JavaScript, Bootstrap, Node.js, Vue.js, Tailwind CSS</p>
+            <div class="skill-extra">Refonte d'un site officiel (intégration GTFS), composants réactifs, optimisation accessibilité et SEO technique.</div>
           </div>
-          <div class="skill-block">
-            <h3>Développement mobile</h3>
-            <p>Flutter</p>
+
+          <div class="skill-block" data-category="mobile">
+            <h3>Développement mobile <button class="more-skill" aria-expanded="false">+ détails</button></h3>
+            <div class="skill-bar" data-value="70" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="skill-bar-fill" style="width:0%"></div>
+            </div>
+            <p class="skill-meta">Flutter</p>
+            <div class="skill-extra">Conception UI/UX mobile, intégration API, tests sur émulateurs et appareils réels.</div>
           </div>
-          <div class="skill-block">
-            <h3>Programmation</h3>
-            <p>Python, Java, C</p>
+
+          <div class="skill-block" data-category="langages">
+            <h3>Programmation <button class="more-skill" aria-expanded="false">+ détails</button></h3>
+            <div class="skill-bar" data-value="80" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="skill-bar-fill" style="width:0%"></div>
+            </div>
+            <p class="skill-meta">Python, Java, C</p>
+            <div class="skill-extra">Projets: reconnaissance faciale (Raspberry Pi/OpenCV), microservices simples en Python.</div>
           </div>
-          <div class="skill-block">
-            <h3>Outils & Frameworks</h3>
-            <p>VS Code, IntelliJ, Android Studio, Figma, Cordova</p>
+
+          <div class="skill-block" data-category="tools">
+            <h3>Outils & Frameworks <button class="more-skill" aria-expanded="false">+ détails</button></h3>
+            <div class="skill-bar" data-value="75" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="skill-bar-fill" style="width:0%"></div>
+            </div>
+            <p class="skill-meta">VS Code, IntelliJ, Android Studio, Figma, Cordova, Laravel</p>
+            <div class="skill-extra">Versioning Git, CI basique, prototypage avec Figma.</div>
           </div>
-          <div class="skill-block">
+
+          <div class="skill-block" data-category="tools">
             <h3>Base de données</h3>
             <p>SQL, Oracle, MongoDB, PHP, Laravel</p>
           </div>
-          <div class="skill-block">
+
+          <div class="skill-block" data-category="tools">
             <h3>Méthodologies</h3>
             <p>UML, SCRUM, Méthodes agiles</p>
           </div>
-          <div class="skill-block">
+
+          <div class="skill-block" data-category="tools">
             <h3>Soft skills</h3>
             <p>Travail en équipe, autonomie, communication</p>
           </div>
-          <div class="skill-block">
+
+          <div class="skill-block" data-category="langages">
             <h3>Langues</h3>
-            <p>Arabe (natif), Français (compétence professionnelle), Anglais (compétence professionnelle)</p>
+            <p>Arabe (natif), Français (professionnel), Anglais (professionnel)</p>
           </div>
         </div>
       </section>
 
-      <!-- Expériences (timeline persistante) -->
+      <!-- Expériences -->
       <section class="card timeline-card" id="experiences">
         <h2>Expériences</h2>
 
         <ul class="timeline" aria-label="Timeline des expériences">
-          <li class="tl-item tl-left">
+          <li class="tl-item tl-left" tabindex="0">
             <div class="tl-content">
               <span class="tl-date">07/2025 – 08/2025</span>
               <h3>Stage d’été — Société Régionale de Transport de Médenine</h3>
-              <p>Refonte du site officiel et intégration d'une section horaires (GTFS) pour la recherche de lignes et horaires.</p>
+              <p>Refonte du site officiel et intégration d'une section horaires (GTFS).</p>
             </div>
           </li>
 
-          <li class="tl-item tl-right">
+          <li class="tl-item tl-right" tabindex="0">
             <div class="tl-content">
               <span class="tl-date">02/2024 – 05/2024</span>
               <h3>Stage PFE — Chaaben Technology Group</h3>
-              <p>Développement d'une application web et mobile connectée à des capteurs pour automatiser l'irrigation.</p>
+              <p>Développement d'une application contrôlant des capteurs pour automatiser l'irrigation.</p>
             </div>
           </li>
 
-          <li class="tl-item tl-left">
+          <li class="tl-item tl-left" tabindex="0">
             <div class="tl-content">
               <span class="tl-date">08/2023</span>
               <h3>Stage d’été — UNIMED Laboratoire Médical</h3>
-              <p>Suivi de la chaîne de production, compréhension du fonctionnement des machines et réalisation d'une armoire électrique.</p>
+              <p>Suivi de production, réalisation d'armoire électrique et optimisation des process.</p>
             </div>
           </li>
 
-          <li class="tl-item tl-right">
+          <li class="tl-item tl-right" tabindex="0">
             <div class="tl-content">
               <span class="tl-date">07/2022</span>
               <h3>Saisonnier — Poste Tunisienne</h3>
-              <p>Traitement du courrier, saisie des données, réception client et tâches de comptabilité journalière.</p>
+              <p>Traitement du courrier, saisie de données et relation client.</p>
             </div>
           </li>
         </ul>
@@ -167,7 +211,7 @@
         </ul>
       </section>
 
-      <!-- Projets (vertical list) -->
+      <!-- Projets -->
       <section class="card projects" id="projets">
         <h2>Projets</h2>
 
@@ -188,7 +232,7 @@
           <article class="project-card">
             <div class="proj-body">
               <h3 class="proj-title">VORTEXBID — Application mobile d'enchères</h3>
-              <p class="proj-desc">Application mobile d’enchères automobiles en temps réel — exploration, suivi et enchères en direct.</p>
+              <p class="proj-desc">Application mobile d’enchères automobiles en temps réel.</p>
               <p class="proj-meta">
                 <span class="tag">Figma</span>
                 <span class="tag">Flutter</span>
@@ -199,7 +243,7 @@
           <article class="project-card">
             <div class="proj-body">
               <h3 class="proj-title">Gestion location de voitures (web)</h3>
-              <p class="proj-desc">Application de gestion de locations (interface Java + MySQL) pour clients, véhicules et réservations.</p>
+              <p class="proj-desc">Interface Java + MySQL pour clients, véhicules et réservations.</p>
               <p class="proj-meta">
                 <span class="tag">Java</span>
                 <span class="tag">MySQL</span>
@@ -210,24 +254,22 @@
           <article class="project-card">
             <div class="proj-body">
               <h3 class="proj-title">Reconnaissance faciale (Raspberry Pi)</h3>
-              <p class="proj-desc">Détection et reconnaissance faciale embarquée avec Raspberry Pi et OpenCV.</p>
+              <p class="proj-desc">Détection et reconnaissance faciale embarquée avec OpenCV.</p>
               <p class="proj-meta">
                 <span class="tag">Raspberry Pi</span>
                 <span class="tag">OpenCV</span>
                 <span class="tag">Python</span>
-                <span class="tag">Vision par ordinateur</span>
               </p>
             </div>
           </article>
         </div>
       </section>
-
     </main>
 
-    <!-- ========== FOOTER ========== -->
+    <!-- FOOTER -->
     <footer class="cv-footer" role="contentinfo">
       <div class="footer-actions">
-        <button class="btn" id="printBtn" title="Imprimer / enregistrer en PDF"><i class="fa fa-print" aria-hidden="true"></i> Imprimer / PDF</button>
+        <button class="btn ghost" id="printBtn" title="Imprimer / enregistrer en PDF"><i class="fa fa-print" aria-hidden="true"></i> Imprimer / PDF</button>
       </div>
 
       <p class="updated-footer">Dernière mise à jour : <time datetime="2025-10-26">26 oct. 2025</time></p>
@@ -235,11 +277,10 @@
     </footer>
   </div>
 
-  <!-- Mini JS: print -->
-  <script>
-    document.getElementById('printBtn').addEventListener('click', function () {
-      window.print();
-    });
-  </script>
+  <!-- html2pdf (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
 </body>
 </html>
