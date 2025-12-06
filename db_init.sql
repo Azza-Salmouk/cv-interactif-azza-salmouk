@@ -1,0 +1,53 @@
+-- db_init.sql
+-- Crée la base et les tables du CV
+CREATE DATABASE IF NOT EXISTS cv_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE cv_db;
+
+CREATE TABLE IF NOT EXISTS profile (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  fullname VARCHAR(200) DEFAULT '',
+  title VARCHAR(200) DEFAULT '',
+  email VARCHAR(120) DEFAULT '',
+  location VARCHAR(200) DEFAULT '',
+  phone VARCHAR(50) DEFAULT '',
+  linkedin VARCHAR(255) DEFAULT '',
+  about TEXT DEFAULT '',
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS skills (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  category VARCHAR(100) DEFAULT '',
+  name VARCHAR(200) DEFAULT '',
+  value TINYINT DEFAULT 0,
+  meta TEXT,
+  ord INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS experiences (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  start_date VARCHAR(50) DEFAULT '',
+  end_date VARCHAR(50) DEFAULT '',
+  title VARCHAR(255) DEFAULT '',
+  company VARCHAR(255) DEFAULT '',
+  summary TEXT,
+  details TEXT,
+  ord INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS formations (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) DEFAULT '',
+  period VARCHAR(100) DEFAULT '',
+  school VARCHAR(255) DEFAULT '',
+  details TEXT,
+  ord INT DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS projects (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) DEFAULT '',
+  description TEXT,
+  tags VARCHAR(255) DEFAULT '',
+  ord INT DEFAULT 0
+);

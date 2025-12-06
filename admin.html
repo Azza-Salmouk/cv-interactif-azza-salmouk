@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - CV</title>
+
+  <!-- Font + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles admin (simple & close to index look) -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <div class="admin-wrap">
+    <header class="admin-header">
+      <h1>Admin — CV</h1>
+      <div class="header-actions">
+        <button id="reloadBtn" class="btn"><i class="fa fa-sync"></i> Recharger</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <!-- PROFILE -->
+      <section class="card" id="profile-section">
+        <h2>Profil</h2>
+        <form id="profileForm">
+          <label>Nom complet<input name="fullname" required></label>
+          <label>Titre<input name="title"></label>
+          <label>Email<input name="email" type="email"></label>
+          <label>Localisation<input name="location"></label>
+          <label>Téléphone<input name="phone"></label>
+          <label>LinkedIn<input name="linkedin"></label>
+          <label>A propos<textarea name="about" rows="4"></textarea></label>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Enregistrer profil</button>
+            <span id="profileMsg" class="msg"></span>
+          </div>
+        </form>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="card" id="skills-section">
+        <h2>Compétences</h2>
+
+        <div class="two-col">
+          <div>
+            <h3>Liste (éditer / supprimer)</h3>
+            <ul id="skillsList" class="list"></ul>
+          </div>
+
+          <div>
+            <h3>Ajouter compétence</h3>
+            <form id="addSkillForm">
+              <label>Catégorie<input name="category" placeholder="web / mobile / langages / tools" required></label>
+              <label>Nom<input name="name" required></label>
+              <label>Valeur (0-100)<input name="value" type="number" min="0" max="100" value="80" required></label>
+              <label>Meta<input name="meta"></label>
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Ajouter</button>
+                <span id="skillMsg" class="msg"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCES -->
+      <section class="card" id="experiences-section">
+        <h2>Expériences (Timeline)</h2>
+        <div class="two-col">
+          <div>
+            <h3>Liste (drag order non géré ici)</h3>
+            <ul id="experiencesList" class="list"></ul>
+          </div>
+
+          <div>
+            <h3>Ajouter expérience</h3>
+            <form id="addExperienceForm">
+              <label>Début<input name="start_date" placeholder="MM/YYYY" required></label>
+              <label>Fin<input name="end_date" placeholder="MM/YYYY ou vide"></label>
+              <label>Titre<input name="title" required></label>
+              <label>Société<input name="company"></label>
+              <label>Résumé<input name="summary"></label>
+              <label>Détails<textarea name="details" rows="3"></textarea></label>
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Ajouter</button>
+                <span id="expMsg" class="msg"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="card" id="projects-section">
+        <h2>Projets</h2>
+        <div class="two-col">
+          <div>
+            <ul id="projectsList" class="list"></ul>
+          </div>
+
+          <div>
+            <form id="addProjectForm">
+              <label>Titre<input name="title" required></label>
+              <label>Description<textarea name="description" rows="3"></textarea></label>
+              <label>Tags (CSV)<input name="tags"></label>
+              <div class="form-actions">
+                <button type="submit" class="btn primary">Ajouter projet</button>
+                <span id="projMsg" class="msg"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "name": "azza/cv",
+    "description": "CV interactif",
+    "require": {
+        "php": ">=7.2",
+        "dompdf/dompdf": "^3.1"
+    }
+}
